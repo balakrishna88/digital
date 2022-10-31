@@ -1,0 +1,30 @@
+{% extends 'website/index.html' %}
+{% block content %}
+  
+<h2>Dservices post</h2>
+  
+  <!--Main Navigation-->
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+    <h1> {{blog.title}}</h1>
+    <p>{{blog.pub_date}}
+  {{blog.content|safe}}
+
+         
+
+
+
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-9 mb-4">
+          <!--Section: Content-->
+          <section>
+            <!-- Post -->
+            <div class="row">
+              {% for i in blogs %}
+              <div class="col-md-4 mb-4">
+                <div class="bg-image hover-overlay shadow-1-strong rounded ripple" data-mdb-ripple-color="light">
+                  <img src="{{i.img.url}}" class="img-fluid">
+                  <a href="{% url 'travelreadblog' i.slug_posttravel %}">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-8 mb-4">
+                <h5>{{i.title}}</h5>
+                <p>
+                  {{i.content|slice:"0:25"}}
+                </p>
+                <a href="{% url 'travelreadblog' i.slug_posttravel %}">
+                <button type="button" class="btn btn-primary">Read</button>
+              </a>
+              </div>
+              {% endfor %}
+            </div>
+
+            
+
+      
+          </section>
+          <!--Section: Content-->
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 mb-4">
+          <!--Section: Sidebar-->
+          <section class="sticky-top" style="top: 80px;">
+            <!--Section: Ad-->
+            <section class="text-center border-bottom pb-4 mb-4">
+              <div class="bg-image hover-overlay ripple mb-4">
+                <img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/standard/about/assets/mdb5-about.webp" class="img-fluid">
+                <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
+                  <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                </a>
+              </div>
+              <h5>Material Design for Bootstrap 5</h5>
+
+              <p>
+                500+ components, free templates, 1-min installation, extensive tutorial, huge
+                community. MIT license - free for personal &amp; commercial use
+              </p>
+              <a role="button" class="btn btn-primary" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download for free<i class="fas fa-download ms-2"></i></a>
+            </section>
+            <!--Section: Ad-->
+
+            
+          </section>
+          <!--Section: Sidebar-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+     
+    </div>
+  </main>
+  <!--Main layout-->
+
+
+  {% endblock content %}

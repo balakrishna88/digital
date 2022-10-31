@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB5-Free_5.0.0/css/mdb.min.css">
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Infinity</b> Tech</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+      <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'applications-index' %}" class="w3-bar-item w3-button">applications</a>
+      <a href="{% url 'automobiles-index' %}" class="w3-bar-item w3-button">automobiles</a>
+      <a href="{% url 'dservices-index' %}" class="w3-bar-item w3-button">Dservices</a>
+      <a href="{% url 'education-index' %}" class="w3-bar-item w3-button">Education</a>
+      <a href="{% url 'gadgets-index' %}" class="w3-bar-item w3-button">Gadgets</a>
+      <a href="{% url 'gservices-index' %}" class="w3-bar-item w3-button">Gservices</a>
+      <a href="{% url 'shopping-index' %}" class="w3-bar-item w3-button">Shopping</a>
+      <a href="{% url 'technology-index' %}" class="w3-bar-item w3-button">technology</a>
+      <a href="{% url 'travel-index' %}" class="w3-bar-item w3-button">Travel</a>
+
+    </div>
+  </div>
+</div>
+
+<br>
+{% block content %}
+
+<!--part1 start -->
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <!--<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Categories</h3>-->
+	
+	<br><center><img src="{% static 'imgs/categories.png' %}" alt="House" style="width:10%"></center>
+	<hr style="height: 5px;
+           background: teal;
+           margin: 20px 0;
+           box-shadow: 0px 0px 4px 2px rgba(204,204,204,1);">
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Technology</div>
+        <img src="{% static 'imgs/tech.jpg' %}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Applications</div>
+        <img src="{% static 'imgs/apps.jpg' %}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Education</div>
+        <img src="{% static 'imgs/education.jpg' %}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Digital Services</div>
+        <img src="{% static 'imgs/services.jpg' %}" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Gadgets</div>
+        <img src="{% static 'imgs/gadgets.jpg' %}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Travel</div>
+        <img src="{% static 'imgs/travel.jpg' %}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Entertainment</div>
+        <img src="{% static 'imgs/entertainment.jpg' %}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Shopping</div>
+        <img src="{% static 'imgs/ecom.jpg' %}" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+<!--part1 end -->
+<hr>
+
+{% endblock content %}
+
+
+</body>
+</html>

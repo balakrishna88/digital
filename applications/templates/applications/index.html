@@ -1,0 +1,42 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Latest posts</strong></h4>
+
+        <div class="row">
+          {% for i in cat %}
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{i.img.url}}" class="img-fluid">
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{i.title}}</h5>
+                <p class="card-text">
+                  {{i.content|slice:"0:25"}}
+                </p>
+                <a href="{% url 'applicationsblog-cat' i.slug_nameapplications %}" class="btn btn-primary" class="btn btn-primary">{{i.name}}</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        
+      </section>
+      <!--Section: Content-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  {% endblock content %}
+
