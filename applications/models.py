@@ -8,7 +8,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 #foreign k=call
 
 #category table
-class Categoryapplications(models.Model):
+class Category_application(models.Model):
     cat_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=35)
     slug_nameapplications=AutoSlugField(populate_from='name', unique=True, null=True,default=None)
@@ -17,11 +17,11 @@ class Categoryapplications(models.Model):
         return self.name
    
 
-class Blogsapplications(models.Model):
+class posts_application(models.Model):
     title = models.CharField(max_length=100)
     content = RichTextUploadingField()
     pub_date = models.DateField(auto_now=True)
-    category = models.ForeignKey(Categoryapplications, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category_application, on_delete=models.CASCADE)
     sub_category = models.CharField(max_length=100, blank=True)
     slug_postapplications=AutoSlugField(populate_from='title', unique=True, null=True,default=None)
   
