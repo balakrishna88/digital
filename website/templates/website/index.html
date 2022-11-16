@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
 <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB5-Free_5.0.0/css/mdb.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
@@ -23,7 +24,9 @@
       
       <a href="{% url 'applications-index' %}" class="w3-bar-item w3-button">Applications</a>
       <a href="{% url 'entertainment-index' %}" class="w3-bar-item w3-button">Entertainment</a>
-      <a href="#" class="w3-bar-item w3-button">automobiles</a>
+      
+      <a href="{% url 'admin:index' %}" class="w3-bar-item w3-button">Login</a>
+      
       
 
     </div>

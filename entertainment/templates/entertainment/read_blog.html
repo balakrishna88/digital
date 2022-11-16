@@ -1,32 +1,28 @@
 {% extends 'website/index.html' %}
-
 {% block content %}
- 
-  
-<h2>applications post</h2>
-  
-  <!--Main Navigation-->
-  <header>
-    <!-- Intro settings -->
-    <style>
-      #intro {
-        /* Margin to fix overlapping fixed navbar */
-        margin-top: 58px;
-      }
 
-      @media (max-width: 991px) {
-        #intro {
-          /* Margin to fix overlapping fixed navbar */
-          margin-top: 45px;
-        }
-      }
-    </style>
-    <h1> {{blog.title}}</h1>
+<br>
+<div class="w3-row w3-border">
+<div class="w3-threequarter w3-container">
+  
+  <h1> {{blog.title}}</h1>
     <p>{{blog.pub_date}}
   {{blog.content|safe}}
 
-         
 
-
+</div>
+<div class="w3-quarter w3-container">
+  
+  <h2>Right side</h2>
+  <p>Categories</p>
+  <h3>Action</h3>
+  <h3>Adventure</h3>
+  <h3>Drama</h3>
+  <h3>Horror</h3>
+  <h3>Sc-fi</h3>
+  <h3>Fantasy</h3>
+  <h3>War</h3>
+</div>
+</div>
 
 {% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+
+
+
+
+<div class="w3-row w3-border">
+<div class="w3-threequarter w3-container">
+<div class="w3-row-padding w3-margin-top">
+{% for i in cat %}
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="img_5terre.jpg" style="width:100%">
+      <div class="w3-container">
+        <h5>{{i.title}}</h5>
+                <p>
+                  {{i.content|slice:"0:25"}}
+				  </p>
+      </div>
+    </div>
+  </div>
+   {% endfor %}
+
+  <div class="w3-third">
+    <div class="w3-card">
+      <img src="img_monterosso.jpg" style="width:100%">
+      <div class="w3-container">
+        <h5>Monterosso</h5>
+      </div>
+    </div>
+  </div>
+
+   {% endfor %}
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+<div class="w3-quarter w3-container w3-border-left">
+  <h2>Right side</h2>
+  <p>Categories</p>
+</div>
+</div>
+
+
+  {% endblock content %}
+

@@ -7,6 +7,7 @@
       <!--Section: Content-->
       <section class="text-center">
         <h4 class="mb-5"><strong>Latest posts</strong></h4>
+        <h2 class="card-title"><a href="{% url 'flipkart' %}" class="btn btn-primary" class="btn btn-primary">Title</a></h2>
 
         <div class="row">
           {% for i in cat %}
@@ -24,6 +25,7 @@
                   {{i.content|slice:"0:25"}}
                 </p>
                 <a href="{% url 'applicationsblog-cat' i.slug_nameapplications %}" class="btn btn-primary" class="btn btn-primary">{{i.name}}</a>
+                <h2>text</h2>
               </div>
             </div>
           </div>
